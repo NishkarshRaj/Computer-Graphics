@@ -11,3 +11,9 @@
   [* Direct/Polynomial Method](Scan%20converting%20a%20circle/Polynomial_circle.cpp)
   
   [* Mid-Point Circle Method](Scan%20converting%20a%20circle/Mid_point_circle.cpp)
+  
+# License:
+
+[MIT License](LICENSE)
+
+Feel free to reuse and distribute :smile:
