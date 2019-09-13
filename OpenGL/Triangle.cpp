@@ -16,9 +16,9 @@ void display()
 	//glClear( GL_COLOR_BUFFER_BIT );
 	//glColor3f(0.1, 0.5, 0.0);
 	glBegin( GL_TRIANGLES );
-		glVertex2i( 200,200 );
-		glVertex2i( 400,200 );
-		glVertex2i( 300,300 );
+		glVertex2i( 200,400 );
+		glVertex2i( 400,400 );
+		glVertex2i( 300,600 );
 	glEnd();
 	glFlush();
 }
