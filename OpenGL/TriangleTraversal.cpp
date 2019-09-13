@@ -2,14 +2,12 @@
 #include<GL/gl.h> 
 #include<iostream>
 using namespace std;
-int x1,x2,x2;
-int y1,y2,y3;
-x1=200;
-x2=400;
-x3=300;
-y1=400;
-y2=400;
-y3=600;
+int x1=200;
+int x2=400;
+int x3=300;
+int y1=400;
+int y2=400;
+int y3=600;
 void init()
 {
     // Set display window color to as glClearColor(R,G,B,Alpha)
@@ -57,7 +55,7 @@ if(key=='s')
 	y3 = y3-10;	
 }
 //Draw the triangle
-clrscr();
+//clrscr();
 	glBegin( GL_TRIANGLES );
 		glVertex2i( x1,y1 );
 		glVertex2i( x2,y2 );
