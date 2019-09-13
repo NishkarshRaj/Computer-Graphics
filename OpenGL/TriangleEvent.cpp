@@ -26,7 +26,13 @@ void event1(unsigned char key, int x, int y )
 {
 if(key)
 {
-glClearColor(0.0, 1.0, 0.0, 1.0);
+	glColor3f(0.0, 1.0, 0.0);
+	glBegin( GL_TRIANGLES );
+		glVertex2i( 200,400 );
+		glVertex2i( 400,400 );
+		glVertex2i( 300,600 );
+	glEnd();
+	glFlush();
 }
 }
 int main(int argc, char**argv) 
