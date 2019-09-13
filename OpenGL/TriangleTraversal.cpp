@@ -56,6 +56,7 @@ if(key=='s')
 }
 //Draw the triangle
 //clrscr();
+//system("reset");
 	glBegin( GL_TRIANGLES );
 		glVertex2i( x1,y1 );
 		glVertex2i( x2,y2 );
