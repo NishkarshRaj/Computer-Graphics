@@ -22,13 +22,12 @@ void display()
 	glEnd();
 	glFlush();
 }
-void event1(char key, int x, int y )
+void event1(unsigned char key, int x, int y )
 {
-	switch ( key ) {
-		case ‘r’:
-		   glClearColor(0,1,0,1);
-		   break;
-	}
+if(key)
+{
+glClearColor(0.0, 1.0, 0.0, 1.0);
+}
 }
 int main(int argc, char**argv) 
 {
@@ -38,7 +37,7 @@ int main(int argc, char**argv)
     glutCreateWindow("Nishkarsh"); 
     init(); //Important to initialize 
     glutDisplayFunc(display);
-	glutKeyboardFunc(event1) 
+    glutKeyboardFunc(event1); 
     glutMainLoop();  //See screen for long time similar to getch
 }
 
