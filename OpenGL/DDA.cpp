@@ -36,40 +36,25 @@ glBegin(GL_POINTS);
 	if(m<=1)
 	{
 		a = 1;
-		//printf("Case %d\n",a++);
-		//printf("X: %f\n",x1);
-		//printf("Y: %f\n",y1);
-		//printf("\n\n");
-		glVertex2i(x,y);
+		glVertex2i(x1,y1);
 		while(x1<x2)
 		{
-			//p/rintf("Case %d\n",a++);
 			x1 = x1 + 1;
 			y1 = (m*x1) + c;
-			//printf("X: %f\n",x1);
 			y1 = (int)(y1+0.5); //Round Off Method!!!
-			//printf("Y: %f\n",y1);
-			//printf("\n\n");
-			glVertex2i(x,y);
+			glVertex2i(x1,y1);
 		}
 	}
 	else
 	{
 		a = 1;
-		//printf("Case %d\n",a++);
-		//printf("X: %f\n",x1);
-		//printf("Y: %f\n",y1);
-		//printf("\n\n");
-		glVertex2i(x,y);
+		glVertex2i(x1,y1);
 		while(y1<y2)
 		{
 			y1 = y1 + 1;
 			x1 = (y1-c)/m;
 			x1 = (int)(x1 + 0.5);
-			//printf("X: %f\n",x1);
-			//printf("Y: %f\n",y1);
-			//printf("\n\n");
-			glVertex2i(x,y);
+			glVertex2i(x1,y1);
 		}
 	}
 	glEnd();
@@ -81,7 +66,7 @@ int main(int argc,char **argv)
 glutInit(&argc,argv);
 glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
 glutInitWindowSize(700,700);
-glutCreateWindow("Hut");
+glutCreateWindow("DDA");
 init();
 glutDisplayFunc(display);
 glutMainLoop();
