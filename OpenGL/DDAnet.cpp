@@ -47,7 +47,7 @@ void Init()
   glColor3f(0.0,0.0,0.0);
   gluOrtho2D(0 , 640 , 0 , 480);
 }
-void main(int argc, char **argv)
+int main(int argc, char **argv)
 {
   printf("Enter 2 end points of the line to draw :\n");
   printf("\n************************************");

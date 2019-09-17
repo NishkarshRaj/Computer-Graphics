@@ -2,6 +2,7 @@
 #include<GL/gl.h>
 #include<iostream>
 using namespace std;
+float x1,x2,y1,y2;
 void init()
 {
 glClearColor(0.0,0.0,1.0,1.0); //Blue background
@@ -52,7 +53,7 @@ int main(int argc,char **argv)
 {
 	// DDA
 	int a; //case counter
-	float x1,x2,y1,y2; // Must be taken as integer for Computer graphics but accuracy decreases for integer due to round of //c is for intercept //m is for slope
+ // Must be taken as integer for Computer graphics but accuracy decreases for integer due to round of //c is for intercept //m is for slope
 	//printf("Simple DDA method\n");
 	printf("Enter first point co-ordinates\n");
 	printf("x1: ");
