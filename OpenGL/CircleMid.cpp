@@ -22,11 +22,6 @@ glBegin(GL_POINTS);
 	p = 1 - r; //Initial Decision Parameter
 	cout<<"\n\n";
 	count = 1;
-/*	cout<<"Case "<<count++<<endl;
-	cout<<"Value of X: "<<x<<endl;
-	cout<<"Value of Y: "<<y<<endl;
-	cout<<"Decision Parameter: "<<p;
-	cout<<"\n\n";*/
 glVertex2i(x,y);
 glVertex2i(-x,y);
 glVertex2i(x,-y);
@@ -48,12 +43,6 @@ glVertex2i(-y,-x);
 			y = y - 1;
 			p = p + (2*x) + 1 - (2*y);
 		}
-/*
-		cout<<"Case "<<count++<<endl;
-		cout<<"Value of X: "<<x<<endl;
-		cout<<"Value of Y: "<<y<<endl;
-		cout<<"Decision Parameter: "<<p;
-		cout<<"\n\n";*/
 glVertex2i(x,y);
 glVertex2i(-x,y);
 glVertex2i(x,-y);
