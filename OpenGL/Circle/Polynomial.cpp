@@ -1,6 +1,7 @@
 #include<GL/glut.h>
 #include<GL/gl.h>
 #include<iostream>
+#include<math.h>
 using namespace std;
 int Xc,Yc,r;
 void init()
@@ -11,23 +12,12 @@ gluOrtho2D(0,700,0,700);
 }
 void display()
 {
-glColor3f(0,1,0);
-glBegin(GL_POINTS);
-glVertex2d();
-glVertex2d();
-glEnd();
-glFlush();
 ///
 	int x,y,count,temp_int;
 	float temp;
 	//Setting initial value
 	x = Xc - r;
 	y = Yc;
-	count = 1;
-	//cout<<"\n\n";
-	//cout<<"Case "<<count++<<endl;
-	//cout<<"Value of X: "<<x<<endl;
-	//cout<<"Value of Y: "<<y<<endl;
 	glColor3f(0,1,0);
 glBegin(GL_POINTS);
 glVertex2d(x,y);
@@ -35,16 +25,10 @@ glEnd();
 glFlush();
 	while(x < (Xc+r))
 	{
-		//cout<<"\n\n";
 		x = x + 1;
 		temp = sqrt(pow(r,2)-pow(x-Xc,2)); 
-		//cout<<temp<<endl;
-		//cout<<int(temp+0.5);
+
 		temp_int = int(temp+0.5);
-		//cout<<"Case "<<count++<<endl;
-		//cout<<"Value of X: "<<x<<endl;
-		//cout<<"Value of Y Top: "<<y+temp_int<<endl;	
-		//cout<<"Value of Y Bottom:"<<y-temp_int;
 		glColor3f(0,1,0);
 glBegin(GL_POINTS);
 glVertex2d(x,y+temp_int);
