@@ -13,15 +13,12 @@ void display()
 {
 	int a;
 	float temp1,temp2,m,c;
-<<<<<<< HEAD
-	glColor3f(0,1,0);
-	glBegin(GL_POINTS);
-=======
->>>>>>> 3b0745bf323ce8b2004d7f54a5feba247cbb85bb
 	temp1 = y2-y1;
 	temp2 = x2-x1;
 	m = temp1/temp2;
+	//printf("Slope: %f\n",m);
 	c = y1 - x1*m;
+	//printf("Intercept: %f\n",c);
 	if(m<=1)
 	{
 		a = 1;
@@ -61,21 +58,17 @@ glBegin(GL_POINTS);
 glEnd();
 glFlush();
 		}
-<<<<<<< HEAD
-	}
-	glEnd();
-	glFlush();
-=======
 }
 //Flush the whole window
 //glFlush();
->>>>>>> 3b0745bf323ce8b2004d7f54a5feba247cbb85bb
 }
 int main(int argc,char **argv)
 {
 	// DDA
 	int a; //case counter
- 	printf("Enter first point co-ordinates\n");
+ // Must be taken as integer for Computer graphics but accuracy decreases for integer due to round of //c is for intercept //m is for slope
+	//printf("Simple DDA method\n");
+	printf("Enter first point co-ordinates\n");
 	printf("x1: ");
 	scanf("%f",&x1);
 	printf("y1: ");
