@@ -11,11 +11,6 @@ gluOrtho2D(0,700,0,700);
 }
 void display()
 {
-	glColor3f(0,1,0);
-glBegin(GL_POLYGON);
-glVertex2d();
-glEnd();
-glFlush();
 /////////////////
 	int c1,c2,x,y,p1,p2;
 	c1 = 0;
@@ -23,7 +18,7 @@ glFlush();
 	y = ry;
 	p1 = (ry*ry) - (rx*rx)*ry + ((rx*rx)/4);
 	glColor3f(0,1,0);
-glBegin(GL_POLYGON);
+glBegin(GL_POINTS);
 glVertex2d(x,y);
 glEnd();
 glFlush();
@@ -41,7 +36,7 @@ glFlush();
 			p1 = p1 + (ry*ry*(2*x+1)) - 2*(rx*rx)*(y);
 		}
 			glColor3f(0,1,0);
-glBegin(GL_POLYGON);
+glBegin(GL_POINTS);
 glVertex2d(x,y);
 glEnd();
 glFlush();
@@ -50,7 +45,7 @@ glFlush();
 	c2 = 0;
 	p2 =  (ry*ry)*(x+0.5)*(x+0.5) + (rx*rx)*(y-1)*(y-1) - (rx*rx*ry*ry);
 	glColor3f(0,1,0);
-glBegin(GL_POLYGON);
+glBegin(GL_POINTS);
 glVertex2d(x,y);
 glEnd();
 glFlush();
@@ -67,7 +62,7 @@ glFlush();
 			p2 = p2 + (rx*rx)*(1-2*y);
 		}
 		glColor3f(0,1,0);
-glBegin(GL_POLYGON);
+glBegin(GL_POINTS);
 glVertex2d(x,y);
 glEnd();
 glFlush();
