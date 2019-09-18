@@ -2,7 +2,7 @@
 #include<GL/gl.h>
 #include<iostream>
 using namespace std;
-int x1,x2,y2,y1;
+float x1,x2,y2,y1;
 void init()
 {
 glClearColor(0.0,0.0,1.0,1.0); //Blue background
@@ -26,7 +26,7 @@ void display()
 	if(m<1)
 	{
 		a = 1;
-		printf("Case %d\n",a++);
+		//printf("Case %d\n",a++);
 glColor3f(0,1,0);
 glBegin(GL_POINTS);
 glVertex2d(x1,y1);
@@ -34,7 +34,7 @@ glEnd();
 glFlush();
 		while(x1<x2)
 		{
-			printf("Case %d\n",a++);
+			//printf("Case %d\n",a++);
 			x1 = x1 + 1;
 			//printf("X: %f\n",x1);
 			if(p<0)
@@ -121,7 +121,7 @@ int main(int argc,char **argv)
 glutInit(&argc,argv);
 glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
 glutInitWindowSize(700,700);
-glutCreateWindow("Hut");
+glutCreateWindow("Brensenham Line by NishkarshRaj");
 init();
 glutDisplayFunc(display);
 glutMainLoop();
