@@ -13,8 +13,6 @@ void display()
 {
 	int a;
 	float temp1,temp2,m,c;
-glColor3f(0,1,0);
-glBegin(GL_POINTS);
 	temp1 = y2-y1;
 	temp2 = x2-x1;
 	m = temp1/temp2;
@@ -24,28 +22,39 @@ glBegin(GL_POINTS);
 	if(m<=1)
 	{
 		a = 1;
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
 		glVertex2i(x1,y1);
+glEnd();
 		while(x1<x2)
 		{
 			x1 = x1 + 1;
 			y1 = (m*x1) + c;
 			y1 = (int)(y1+0.5); //Round Off Method!!!
-			glVertex2i(x1,y1);
+			glColor3f(0,1,0);
+glBegin(GL_POINTS);
+		glVertex2i(x1,y1);
+glEnd();
 		}
 	}
 	else
 	{
 		a = 1;
+		glColor3f(0,1,0);
+glBegin(GL_POINTS);
 		glVertex2i(x1,y1);
+glEnd();
 		while(y1<y2)
 		{
 			y1 = y1 + 1;
 			x1 = (y1-c)/m;
 			x1 = (int)(x1 + 0.5);
-			glVertex2i(x1,y1);
+			glColor3f(0,1,0);
+glBegin(GL_POINTS);
+		glVertex2i(x1,y1);
+glEnd();
 		}
-	}
-	glEnd();
+}
 //Flush the whole window
 glFlush();
 }
