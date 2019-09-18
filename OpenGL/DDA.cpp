@@ -24,39 +24,43 @@ void display()
 		a = 1;
 glColor3f(0,1,0);
 glBegin(GL_POINTS);
-		glVertex2i(x1,y1);
+		glVertex2d(x1,y1);
 glEnd();
+glFlush();
 		while(x1<x2)
 		{
 			x1 = x1 + 1;
 			y1 = (m*x1) + c;
 			y1 = (int)(y1+0.5); //Round Off Method!!!
-			glColor3f(0,1,0);
+			glColor3f(0.4,1,0);
 glBegin(GL_POINTS);
-		glVertex2i(x1,y1);
+		glVertex2d(x1,y1);
 glEnd();
+glFlush();
 		}
 	}
 	else
 	{
 		a = 1;
-		glColor3f(0,1,0);
+		glColor3f(0.4,1,0);
 glBegin(GL_POINTS);
-		glVertex2i(x1,y1);
+		glVertex2d(x1,y1);
 glEnd();
+glFlush();
 		while(y1<y2)
 		{
 			y1 = y1 + 1;
 			x1 = (y1-c)/m;
 			x1 = (int)(x1 + 0.5);
-			glColor3f(0,1,0);
+			glColor3f(0.4,1,0);
 glBegin(GL_POINTS);
-		glVertex2i(x1,y1);
+		glVertex2d(x1,y1);
 glEnd();
+glFlush();
 		}
 }
 //Flush the whole window
-glFlush();
+//glFlush();
 }
 int main(int argc,char **argv)
 {
