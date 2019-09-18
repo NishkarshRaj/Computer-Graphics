@@ -12,12 +12,7 @@ gluOrtho2D(0,700,0,700);
 }
 void display()
 {
-glBegin(GL_POINTS);
-glVertex2d();
-glEnd();
-glFlush();
-////
-	int x,y,p,c; //r is radius
+int x,y,c,p;
 	//Setting initial x and y
 	x = 0;
 	y = r;
