@@ -13,8 +13,11 @@ void display()
 {
 	int a;
 	float temp1,temp2,m,c;
+<<<<<<< HEAD
 	glColor3f(0,1,0);
 	glBegin(GL_POINTS);
+=======
+>>>>>>> 3b0745bf323ce8b2004d7f54a5feba247cbb85bb
 	temp1 = y2-y1;
 	temp2 = x2-x1;
 	m = temp1/temp2;
@@ -22,29 +25,51 @@ void display()
 	if(m<=1)
 	{
 		a = 1;
-		glVertex2i(x1,y1);
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+		glVertex2d(x1,y1);
+glEnd();
+glFlush();
 		while(x1<x2)
 		{
 			x1 = x1 + 1;
 			y1 = (m*x1) + c;
 			y1 = (int)(y1+0.5); //Round Off Method!!!
-			glVertex2i(x1,y1);
+			glColor3f(0.4,1,0);
+glBegin(GL_POINTS);
+		glVertex2d(x1,y1);
+glEnd();
+glFlush();
 		}
 	}
 	else
 	{
 		a = 1;
-		glVertex2i(x1,y1);
+		glColor3f(0.4,1,0);
+glBegin(GL_POINTS);
+		glVertex2d(x1,y1);
+glEnd();
+glFlush();
 		while(y1<y2)
 		{
 			y1 = y1 + 1;
 			x1 = (y1-c)/m;
 			x1 = (int)(x1 + 0.5);
-			glVertex2i(x1,y1);
+			glColor3f(0.4,1,0);
+glBegin(GL_POINTS);
+		glVertex2d(x1,y1);
+glEnd();
+glFlush();
 		}
+<<<<<<< HEAD
 	}
 	glEnd();
 	glFlush();
+=======
+}
+//Flush the whole window
+//glFlush();
+>>>>>>> 3b0745bf323ce8b2004d7f54a5feba247cbb85bb
 }
 int main(int argc,char **argv)
 {
