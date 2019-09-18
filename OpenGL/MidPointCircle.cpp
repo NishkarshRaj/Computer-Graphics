@@ -12,14 +12,59 @@ gluOrtho2D(0,700,0,700);
 void display()
 {
 ///
-	x,y,p;
+	int x,y,p,xn,yn;
 	//Setting initial values of x and y
 	x = Xc;
 	y = Yc + r;
 	p = 1 - r; //Initial Decision Parameter
-	glColor3f(0,1,0);
+xn=0-x;
+yn=0-y;
+glColor3f(0,1,0);
 glBegin(GL_POINTS);
 glVertex2d(x,y);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(x,yn);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(xn,y);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(xn,yn);
+glEnd();
+glColor3f(0,1,0);
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(y,x);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(y,xn);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(yn,x);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(yn,xn);
 glEnd();
 glFlush();
 	while(x<y)
@@ -35,9 +80,54 @@ glFlush();
 			y = y - 1;
 			p = p + (2*x) + 1 - (2*y);
 		}
-		glColor3f(0,1,0);
+xn=0-x;
+yn=0-y;
+glColor3f(0,1,0);
 glBegin(GL_POINTS);
 glVertex2d(x,y);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(x,yn);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(xn,y);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(xn,yn);
+glEnd();
+glColor3f(0,1,0);
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(y,x);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(y,xn);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(yn,x);
+glEnd();
+glFlush();
+
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
+glVertex2d(yn,xn);
 glEnd();
 glFlush();
 	}	
