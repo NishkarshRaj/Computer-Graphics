@@ -1,6 +1,7 @@
 #include<GL/glut.h>
 #include<GL/gl.h>
 #include<iostream>
+#include<math.h>
 using namespace std;
 void init()
 {
@@ -10,6 +11,8 @@ gluOrtho2D(0,700,0,700);
 }
 void display()
 {
+int x,y,count,temp_int;
+	float temp;
 //Lowermost Green Color Bottom Cover
 //glColor3i(0,255,0); Does not work
 glColor3f(0,1,0);
@@ -100,6 +103,24 @@ glVertex2i(200,400);
 glVertex2i(360,400);
 glVertex2i(280,550);
 glEnd();
+//// Circle in Triangle
+	//Setting initial value
+	x = 260; //xc -r
+	y = 460; //yc
+	glColor3f(1,0.3,0.3);
+glBegin(GL_POLYGON);
+glVertex2d(x,y);
+	while(x < (300)) //xc +r
+	{
+		x = x + 1;
+		temp = sqrt(pow(20,2)-pow(x-280,2)); 
+
+		temp_int = int(temp+0.5);
+glVertex2d(x,y+temp_int);
+glVertex2d(x,y-temp_int);
+	}
+glEnd();
+////
 //Parallelogram
 glColor3f(0.92,0.54,0.13);
 glBegin(GL_POLYGON);
@@ -183,6 +204,23 @@ glVertex2i(480,550);
 glVertex2i(510,550);
 glVertex2i(510,590);
 glVertex2i(480,590);
+glEnd();
+//Circle
+	//Setting initial value
+	x = 600; //xc -r
+	y = 630; //yc
+	glColor3f(1,1,0);
+glBegin(GL_POLYGON);
+glVertex2d(x,y);
+	while(x < (660)) //xc +r
+	{
+		x = x + 1;
+		temp = sqrt(pow(30,2)-pow(x-630,2)); 
+
+		temp_int = int(temp+0.5);
+glVertex2d(x,y+temp_int);
+glVertex2d(x,y-temp_int);
+	}
 glEnd();
 //Flush the whole window
 glFlush();
