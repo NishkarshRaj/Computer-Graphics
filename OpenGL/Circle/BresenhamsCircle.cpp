@@ -12,39 +12,33 @@ gluOrtho2D(0,700,0,700);
 }
 void display()
 {
-int x,y,c,p;
-	//Setting initial x and y
-	x = 0;
-	y = r;
-	//Initial Decision Parameter
-	p = 3 - (2*r);
-	//Case initialization
-	c = 0;
-	//Bresenham's Circle
+		int x,y,p;
+	x=0; //x = xc
+	y=r; //y = yc+r
+	p = 3-2*r; //Initial Decision Parameter
 	do
 	{
 		glColor3f(0,1,0);
 		glBegin(GL_POINTS);
-glVertex2d(x,y);
-glEnd();
-glFlush();
-		if(p<0)
-		{
-			p = p + 4*x + 6;
-		}
-		else
-		{
-			p = p + 4*(x-y) + 10;
-			y--;
-		}
-		x++;
+		glVertex2d(x,y);
+		glEnd();
+		glFlush();
+	if(p<0)
+	{
+		p = p + 4*x + 6;
+	}
+	else
+	{
+		p = p + 4*x - 4*y + 10;
+		y--;
+	}
+	x++;
 	}while(x!=y);
 	glColor3f(0,1,0);
 		glBegin(GL_POINTS);
-glVertex2d(x,y);
-glEnd();
-glFlush();
-////
+		glVertex2d(x,y);
+		glEnd();
+		glFlush();
 }
 int main(int argc,char **argv)
 {
