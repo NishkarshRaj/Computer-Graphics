@@ -17,8 +17,8 @@ void display()
 	x = Xc;
 	y = Yc + r;
 	p = 1 - r; //Initial Decision Parameter
-xn=0-x;
-yn=0-y;
+xn=2*Xc-x;
+yn=2*Yc-y;
 glColor3f(0,1,0);
 glBegin(GL_POINTS);
 glVertex2d(x,y);
@@ -80,8 +80,8 @@ glFlush();
 			y = y - 1;
 			p = p + (2*x) + 1 - (2*y);
 		}
-xn=0-x;
-yn=0-y;
+xn=2*Xc-x;
+yn=2*Yc-y;
 glColor3f(0,1,0);
 glBegin(GL_POINTS);
 glVertex2d(x,y);
