@@ -21,6 +21,7 @@ void display()
 {
 	//glClear( GL_COLOR_BUFFER_BIT );
 	//glColor3f(0.1, 0.5, 0.0);
+glColor3f(0,1,0);
 	glBegin( GL_TRIANGLES );
 		glVertex2i( x1,y1 );
 		glVertex2i( x2,y2 );
@@ -30,6 +31,14 @@ void display()
 }
 void event1(unsigned char key, int x, int y )
 {
+//overwrite previous triangle with old color
+glColor3f(1,0,0);
+	glBegin( GL_TRIANGLES );
+		glVertex2i( x1,y1 );
+		glVertex2i( x2,y2 );
+		glVertex2i( x3,y3 );
+	glEnd();
+	glFlush();
 if(key=='a')
 {
 	x1 = x1-10;
@@ -57,6 +66,7 @@ if(key=='s')
 //Draw the triangle
 //clrscr();
 //system("reset");
+glColor3f(0,1,0);
 	glBegin( GL_TRIANGLES );
 		glVertex2i( x1,y1 );
 		glVertex2i( x2,y2 );
