@@ -3,6 +3,8 @@
 #include<iostream>
 #include<math.h>
 using namespace std;
+int x,y,count,temp_int;
+float temp;
 void init()
 {
 glClearColor(0.0,0.0,1.0,1.0); //Blue background
@@ -11,8 +13,6 @@ gluOrtho2D(0,700,0,700);
 }
 void display()
 {
-int x,y,count,temp_int;
-	float temp;
 //Lowermost Green Color Bottom Cover
 //glColor3i(0,255,0); Does not work
 glColor3f(0,1,0);
@@ -225,8 +225,30 @@ glEnd();
 //Flush the whole window
 glFlush();
 }
+//////////////Mouse Function
+void myMouse(int button, int state, int x, int y) 
+{
+if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
+{
+		x = 600; //xc -r
+	y = 630; //yc
+	glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+glVertex2d(x,y);
+	while(x < (660)) //xc +r
+	{
+		x = x + 1;
+		temp = sqrt(pow(30,2)-pow(x-630,2)); 
 
-
+		temp_int = int(temp+0.5);
+glVertex2d(x,y+temp_int);
+glVertex2d(x,y-temp_int);
+	}
+glEnd();	
+}
+glFlush();
+}
+//////////////
 ///////////////Keyboard Function
 void event1(unsigned char key, int x, int y )
 {
@@ -277,10 +299,6 @@ if(key)
 }
 }
 ///////////////
-
-
-
-
 int main(int argc,char **argv)
 {
 glutInit(&argc,argv);
@@ -290,5 +308,6 @@ glutCreateWindow("Nishkarsh Raj Assignment 2");
 init();
 glutDisplayFunc(display);
 glutKeyboardFunc(event1);
+glutMouseFunc(myMouse);
 glutMainLoop();
 }
