@@ -225,13 +225,70 @@ glEnd();
 //Flush the whole window
 glFlush();
 }
+
+
+///////////////Keyboard Function
+void event1(unsigned char key, int x, int y )
+{
+if(key)
+{
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin( GL_LINES );
+	glVertex2d( 480,590 );
+	glVertex2d( 480,620 );
+	glEnd();
+	glFlush();
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin( GL_LINES );
+	glVertex2d( 485,590 );
+	glVertex2d( 485,620 );
+	glEnd();
+	glFlush();
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin( GL_LINES );
+	glVertex2d( 490,590 );
+	glVertex2d( 490,620 );
+	glEnd();
+	glFlush();
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin( GL_LINES );
+	glVertex2d( 495,590 );
+	glVertex2d( 495,620 );
+	glEnd();
+	glFlush();
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin( GL_LINES );
+	glVertex2d( 500,590 );
+	glVertex2d( 500,620 );
+	glEnd();
+	glFlush();
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin( GL_LINES );
+	glVertex2d( 505,590 );
+	glVertex2d( 505,620 );
+	glEnd();
+	glFlush();
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin( GL_LINES );
+	glVertex2d( 510,590 );
+	glVertex2d( 510,620 );
+	glEnd();
+	glFlush();
+}
+}
+///////////////
+
+
+
+
 int main(int argc,char **argv)
 {
 glutInit(&argc,argv);
 glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
 glutInitWindowSize(700,700);
-glutCreateWindow("Hut");
+glutCreateWindow("Nishkarsh Raj Assignment 2");
 init();
 glutDisplayFunc(display);
+glutKeyboardFunc(event1);
 glutMainLoop();
 }
