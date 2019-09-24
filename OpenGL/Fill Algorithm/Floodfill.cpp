@@ -1,5 +1,6 @@
 #include <math.h>
-#include <gl/glut.h>
+#include <GL/glut.h>
+#include<GL/gl.h>
 
 struct Point {
 	GLint x;
