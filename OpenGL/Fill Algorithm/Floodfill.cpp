@@ -2,41 +2,11 @@
 #include <GL/glut.h>
 #include<GL/gl.h>
 
-struct Point {
-	GLint x;
-	GLint y;
-};
-
 struct Color {
 	GLfloat r;
 	GLfloat g;
 	GLfloat b;
 };
-
-void draw_dda(Point p1, Point p2) {
-	GLfloat dx = p2.x - p1.x;
-	GLfloat dy = p2.y - p1.y;
-
-	GLfloat x1 = p1.x;
-	GLfloat y1 = p1.y;
-
-	GLfloat step = 0;
-
-	if(abs(dx) > abs(dy)) {
-		step = abs(dx);
-	} else {
-		step = abs(dy);
-	}
-
-	GLfloat xInc = dx/step;
-	GLfloat yInc = dy/step;
-
-	for(float i = 1; i <= step; i++) {
-		glVertex2i(x1, y1);
-		x1 += xInc;
-		y1 += yInc;
-	}
-}
 
 void init() {
 	glClearColor(1.0, 1.0, 1.0, 0.0);
@@ -84,20 +54,41 @@ void onMouseClick(int button, int state, int x, int y)
 	floodFill(101, 199, oldColor, newColor);
 }
 
-void display(void) {
-	Point p1 = {100, 100}, // bottom-right
-		p2 = {200, 100}, // bottom-left
-		p3 = {200, 200}, // top-right
-		p4 = {100, 200}; // top-left
-	
-	glClear(GL_COLOR_BUFFER_BIT);
+void display(void) 
+{
+	int i;
+	for(i=200;i<=500;i++)
+	{
+		glColor3f(0,1,0);
 	glBegin(GL_POINTS);
-		draw_dda(p1, p2);
-		draw_dda(p2, p3);
-		draw_dda(p3, p4);
-		draw_dda(p4, p1);
+	glVertex2i(i,200);
 	glEnd();
 	glFlush();
+	}		
+	for(i=200;i<=500;i++)
+	{
+		glColor3f(0,1,0);
+	glBegin(GL_POINTS);
+	glVertex2i(500,i);
+	glEnd();
+	glFlush();
+	}
+	for(i=500;i>=200;i--)
+	{
+		glColor3f(0,1,0);
+	glBegin(GL_POINTS);
+	glVertex2i(i,500);
+	glEnd();
+	glFlush();
+	}
+	for(i=500;i>=200;i--)
+	{
+		glColor3f(0,1,0);
+	glBegin(GL_POINTS);
+	glVertex2i(200,i);
+	glEnd();
+	glFlush();
+	}
 }
 
 int main(int argc, char** argv)
@@ -106,7 +97,7 @@ int main(int argc, char** argv)
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
 	glutInitWindowSize(640, 480);
 	glutInitWindowPosition(200, 200);
-	glutCreateWindow("Open GL");
+	glutCreateWindow("Fill Color By Nishkarsh Raj");
 	init();
 	glutDisplayFunc(display);
 	glutMouseFunc(onMouseClick);
