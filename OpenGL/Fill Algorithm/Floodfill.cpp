@@ -50,8 +50,10 @@ void onMouseClick(int button, int state, int x, int y)
 {
 	Color newColor = {1.0f, 0.0f, 0.0f};
 	Color oldColor = {1.0f, 1.0f, 1.0f};
-
-	floodFill(201, 499 , oldColor, newColor);
+GLint x41,y41;
+x41=350;
+y41=350;
+	floodFill(x, y , oldColor, newColor);
 }
 
 void display(void) 
