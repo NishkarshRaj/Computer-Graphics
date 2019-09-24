@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM debian
 ADD script1.sh /script1.sh
 ADD Assignment2.cpp /Assignment2.cpp
 RUN chmod +x /script1.sh
