@@ -13,6 +13,7 @@ gluOrtho2D(0,700,0,700);
 }
 void display()
 {
+glClear(GL_COLOR_BUFFER_BIT);
 //Lowermost Green Color Bottom Cover
 //glColor3i(0,255,0); Does not work
 glColor3f(0,1,0);
