@@ -63,7 +63,7 @@ void onMouseClick(int button, int state, int x, int y)
 	Color fillColor = {1.0f, 0.0f, 0.0f};		// red color will be filled
 	Color boundaryColor = {0.0f, 0.0f, 0.0f}; // black- boundary
 
-	Point p = {350,350}; // a point inside the square
+	Point p = {201,201}; // a point inside the square
 
 	BoundaryFill(p.x, p.y, fillColor, boundaryColor);
 }
@@ -72,7 +72,7 @@ void onMouseClick(int button, int state, int x, int y)
 void display(void) {
 	int i;
 	
-
+glClear(GL_COLOR_BUFFER_BIT);
 	//Draw square using points
 	//Lower point of square
 	for(i=200;i<=500;i++)

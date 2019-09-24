@@ -35,7 +35,7 @@ void floodFill(GLint x, GLint y, Color oldColor, Color newColor) {
 	Color color;
 	color = getPixelColor(x, y);
 
-	if(color.r == oldColor.r && color.g == oldColor.g && color.b == oldColor.b)
+	if((color.r==oldColor.r)&&(color.g==oldColor.g)&&(color.b==oldColor.b))
 	{
 		setPixelColor(x, y, newColor);
 		floodFill(x+1, y, oldColor, newColor);
@@ -51,12 +51,13 @@ void onMouseClick(int button, int state, int x, int y)
 	Color newColor = {1.0f, 0.0f, 0.0f};
 	Color oldColor = {1.0f, 1.0f, 1.0f};
 
-	floodFill(101, 199, oldColor, newColor);
+	floodFill(201, 499 , oldColor, newColor);
 }
 
 void display(void) 
 {
 	int i;
+glClear(GL_COLOR_BUFFER_BIT);
 	for(i=200;i<=500;i++)
 	{
 		glColor3f(0,1,0);
