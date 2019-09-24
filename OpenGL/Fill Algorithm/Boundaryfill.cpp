@@ -1,5 +1,6 @@
 #include <math.h>
-#include <gl/glut.h>
+#include <GL/glut.h>
+#include<GL/gl.h>
 
 struct Point {
 	GLint x;
@@ -21,6 +22,7 @@ void init() {
 	gluOrtho2D(0, 640, 0, 480);
 }
 
+// Function of return type Color which is a structure defined above
 Color getPixelColor(GLint x, GLint y) {
 	Color color;
 	glReadPixels(x, y, 1, 1, GL_RGB, GL_FLOAT, &color);
