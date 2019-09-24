@@ -70,34 +70,46 @@ void onMouseClick(int button, int state, int x, int y)
 
 
 void display(void) {
-	Point pt = {320, 240};
-	GLfloat length = 50;
 	int i;
-	glClear(GL_COLOR_BUFFER_BIT);
-	glBegin(GL_POINTS);
+	
+
 	//Draw square using points
 	//Lower point of square
 	for(i=200;i<=500;i++)
 	{
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
 		glVertex2i(i,200);
+glEnd();
+	glFlush();
 	}
 	//right boundary
 	for(i=200;i<=500;i++)
 	{
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
 		glVertex2i(500,i);
+glEnd();
+	glFlush();
 	}
 	//Top boundary
-	for(i=500;i>=200;i++)
+	for(i=500;i>=200;i--)
 	{
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
 		glVertex2i(i,500);
+glEnd();
+	glFlush();
 	}
 	//Left boundary
-	for(i=500;i>=200;i++)
+	for(i=500;i>=200;i--)
 	{
+glColor3f(0,1,0);
+glBegin(GL_POINTS);
 		glVertex2i(200,i);
-	}
-	glEnd();
+		glEnd();
 	glFlush();
+	}
 }
 
 int main(int argc, char** argv)
