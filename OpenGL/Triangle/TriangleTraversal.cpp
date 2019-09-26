@@ -19,7 +19,7 @@ void init()
 }
 void display()
 {
-	//glClear( GL_COLOR_BUFFER_BIT );
+	glClear( GL_COLOR_BUFFER_BIT );
 	//glColor3f(0.1, 0.5, 0.0);
 glColor3f(0,1,0);
 	glBegin( GL_TRIANGLES );
@@ -63,9 +63,6 @@ if(key=='s')
 	y2 = y2-10;
 	y3 = y3-10;	
 }
-//Draw the triangle
-//clrscr();
-//system("reset");
 glColor3f(0,1,0);
 	glBegin( GL_TRIANGLES );
 		glVertex2i( x1,y1 );
