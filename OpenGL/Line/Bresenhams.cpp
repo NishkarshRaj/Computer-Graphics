@@ -11,7 +11,7 @@ gluOrtho2D(0,700,0,700);
 }
 void display()
 {
-//////
+	//glClear(GL_COLOR_BUFFER_BIT);
 	int a,p,t1,t2; //a is case counter //p is decision parameter
 	//float x1,x2,y1,y2; // Must be taken as integer for Computer graphics but accuracy decreases for integer due to round off.
 	float m,temp1,temp2; //m is for slope
