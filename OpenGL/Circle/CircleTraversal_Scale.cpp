@@ -16,6 +16,7 @@ void display()
 {
 ///
 	//Setting initial value
+	glClear(GL_COLOR_BUFFER_BIT);
 	x = Xc - r;
 	y = Yc;
 	glColor3f(0,1,0);
