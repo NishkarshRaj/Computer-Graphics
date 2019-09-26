@@ -13,7 +13,7 @@ void init()
 }
 void display()
 {
-	//glClear( GL_COLOR_BUFFER_BIT );
+	glClear( GL_COLOR_BUFFER_BIT );
 	//glColor3f(0.1, 0.5, 0.0);
 	glBegin( GL_TRIANGLES );
 		glVertex2i( 200,400 );
