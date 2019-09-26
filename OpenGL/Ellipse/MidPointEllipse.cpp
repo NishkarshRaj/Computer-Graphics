@@ -12,6 +12,7 @@ gluOrtho2D(0,700,0,700);
 void display()
 {
 /////////////////
+	glClear(GL_COLOR_BUFFER_BIT);
 	int c1,c2,x,y,p1,p2,x1,y1,x2,y2;
 	c1 = 0;
 	x = 0;
