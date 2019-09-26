@@ -12,6 +12,7 @@ gluOrtho2D(0,700,0,700);
 void display()
 {
 ///
+	glClear(GL_COLOR_BUFFER_BIT);
 	int x,y,count,temp_int;
 	float temp;
 	//Setting initial value
