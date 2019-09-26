@@ -8,5 +8,3 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: ./action-a
-      env:
-        MY_NAME: "Nishkarsh Raj"
