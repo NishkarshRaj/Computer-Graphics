@@ -1,7 +1,14 @@
 #include<GL/glut.h>
 #include<GL/gl.h> 
 #include<iostream>
-int x1,y1;
+int x1=100;
+int y1=100;
+int x2=150;
+int x3=150;
+int x4=100;
+int y2=100;
+int y3=150;
+int y4=150;
 using namespace std;
 void init()
 {
@@ -10,16 +17,14 @@ void init()
     gluOrtho2D(0.0, 700, 0.0, 700);
 }
 void display()
-{	
-	x1=100;
-	y1=100;
+{
 	glClear( GL_COLOR_BUFFER_BIT );
-	glColor3f(0, 0, 0.0);
+	glColor3f(0, 0, 0);
 	glBegin( GL_POLYGON );
 		glVertex2i( x1,y1 );
-		glVertex2i( x1+50,y1 );
-		glVertex2i( x1+50,y1+50 );
-		glVertex2i( x1,y1+50 ); 
+		glVertex2i( x2,y2 );
+		glVertex2i( x3,y3 );
+		glVertex2i( x4,y4 ); 
 	glFlush();
 	glEnd();
 	glColor3f(1,0,0);
@@ -35,21 +40,25 @@ void event1(unsigned char key, int x, int y )
 {
 if(key=='w')
 {
-glColor3f(1, 1, 1);
+	glColor3f(1, 1, 1);
 	glBegin( GL_POLYGON );
 		glVertex2i( x1,y1 );
-		glVertex2i( x1+50,y1 );
-		glVertex2i( x1+50,y1+50 );
-		glVertex2i( x1,y1+50 ); 
+		glVertex2i( x2,y2 );
+		glVertex2i( x3,y3 );
+		glVertex2i( x4,y4 ); 
 	glFlush();
 	
 	y1=y1+10;
+y2=y2+10;
+y3=y3+10;
+y4=y4+10;
+
 	glColor3f(0, 0, 0);
 	glBegin( GL_POLYGON );
 		glVertex2i( x1,y1 );
-		glVertex2i( x1+50,y1);
-		glVertex2i( x1+50,y1+50 );
-		glVertex2i( x1,y1+50 ); 
+		glVertex2i( x2,y2);
+		glVertex2i( x3,y3 );
+		glVertex2i( x4,y4 ); 
 	glFlush();
 }
 if(key=='s')
