@@ -12,17 +12,19 @@ void display()
 {
 	glClear( GL_COLOR_BUFFER_BIT );
 	glColor3f(0, 0, 0.0);
-	glBegin( GL_POYLGON );
-		glVertex2i( 200,500 );
-		glVertex2i( 500,200 );
-		glVertex2i( 500,500 );
-		glVertex2i( 200,500 ); 
+	glBegin( GL_POLYGON );
+		glVertex2i( 100,100 );
+		glVertex2i( 150,100 );
+		glVertex2i( 150,150 );
+		glVertex2i( 100,150 ); 
+	glFlush();
 	glEnd();
-	glColor3f(0,0,0);
-	glBegin(GL_LINE);
-	glVertex2i(700,700);
-	glVertex2i(0,0);
+	glColor3f(1,0,0);
+	glBegin(GL_LINES);
+	glVertex2i(0,700);
+	glVertex2i(700,0);
 	glEnd();
+
 	glFlush();
 }
 int main(int argc, char**argv) 
