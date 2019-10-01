@@ -20,14 +20,14 @@ void display()
 	glColor3f(1,0,0);
 	glBegin( GL_POINTS );
 		glVertex2i( x,y );
-		glVertex2i( x+1,y );
-		glVertex2i( x,y+1 );
-		glVertex2i( x-1,y );
-		glVertex2i( x,y-1 );
-		glVertex2i( x+1,y+1 );
-		glVertex2i( x-1,y-1 );
-		glVertex2i( x+1,y-1 );
-		glVertex2i( x-1,y+1 );
+		glVertex2i( x+4,y );
+		glVertex2i( x,y+4 );
+		glVertex2i( x-4,y );
+		glVertex2i( x,y-4 );
+		glVertex2i( x+2,y+2 );
+		glVertex2i( x-2,y-2 );
+		glVertex2i( x+2,y-2 );
+		glVertex2i( x-2,y+2 );
 	glEnd();
 	glFlush();
 }
