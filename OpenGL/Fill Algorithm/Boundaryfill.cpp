@@ -21,7 +21,7 @@ void init() {
 	glClearColor(1.0, 1.0, 1.0, 0.0); // Black Color
 	glColor3f(0.0, 0.0, 0.0); // White Color
 	glPointSize(1.0); // Specify the point size
-	glMatrixMode(GL_PROJECTION);
+	glMatrixMode(GL_PROJECTION); //Transformation
 	glLoadIdentity();
 	gluOrtho2D(0, 700, 0, 700);
 }
@@ -63,7 +63,7 @@ void onMouseClick(int button, int state, int x, int y)
 	Color fillColor = {1.0f, 0.0f, 0.0f};		// red color will be filled
 	Color boundaryColor = {0.0f, 0.0f, 0.0f}; // black- boundary
 
-	Point p = {201,201}; // a point inside the square
+	Point p = {350,350}; // a point inside the square
 
 	BoundaryFill(p.x, p.y, fillColor, boundaryColor);
 }
@@ -117,7 +117,7 @@ int main(int argc, char** argv)
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
 	glutInitWindowSize(700, 700);
-	glutInitWindowPosition(200, 200);
+	//glutInitWindowPosition(200, 200);
 	glutCreateWindow("Boundary Fill : Nishkarsh");
 	init();
 	glutDisplayFunc(display);
