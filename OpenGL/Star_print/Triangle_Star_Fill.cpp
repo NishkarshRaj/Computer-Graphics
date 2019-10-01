@@ -44,15 +44,13 @@ void display()
 	int x,y,i,j;
 	x=300;
 	y=500;
-	for(i=0;i<=150;i=i+10)
+	for(i=0;i<=150;i=1+10;)
 	{
-		print_star(x+i,y-i);
-		print_star(x,y-i);
+		for(j=0;i<=150;j++)
+		{
+			print_star(x+i,y-j);
+		}
 	}
-	for(j=0;j<=150;j=j+10)
-{
-print_star(x+j,y-i);
-}
 }
 int main(int argc, char**argv) 
 {
