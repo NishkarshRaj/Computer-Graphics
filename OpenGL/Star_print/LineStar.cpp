@@ -18,7 +18,7 @@ void display()
 	x=350;
 	y=350;
 	glColor3f(1,0,0);
-	glBegin( GL_LINES );
+	glBegin( GL_LINES ); //LINES not LINE => LINE does not give error but does not render anything!!!
 		glVertex2i( x,y-6 );
 		glVertex2i( x,y+6 );
 	glEnd();
