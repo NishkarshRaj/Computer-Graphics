@@ -13,21 +13,32 @@ void init()
 }
 void display()
 {
+	glClear( GL_COLOR_BUFFER_BIT );	
 	int x,y;
 	x=350;
 	y=350;
-	glClear( GL_COLOR_BUFFER_BIT );
 	glColor3f(1,0,0);
-	glBegin( GL_LINE );
-		glVertex2i( x,y-2 );
-		glVertex2i( x,y+2 );
+	glBegin( GL_LINES );
+		glVertex2i( x,y-6 );
+		glVertex2i( x,y+6 );
 	glEnd();
 	glFlush();
-	glClear( GL_COLOR_BUFFER_BIT );
 	glColor3f(1,0,0);
-	glBegin( GL_LINE );
-		glVertex2i( x-2,y );
-		glVertex2i( x+2,y );
+	glBegin( GL_LINES );
+		glVertex2i( x-6,y );
+		glVertex2i( x+6,y );
+	glEnd();
+	glFlush();
+	glColor3f(1,0,0);
+	glBegin( GL_LINES );
+		glVertex2i( x-6,y+6 );
+		glVertex2i( x+6,y-6 );
+	glEnd();
+	glFlush();
+	glColor3f(1,0,0);
+	glBegin( GL_LINES );
+		glVertex2i( x-6,y-6 );
+		glVertex2i( x+6,y+6 );
 	glEnd();
 	glFlush();
 }
