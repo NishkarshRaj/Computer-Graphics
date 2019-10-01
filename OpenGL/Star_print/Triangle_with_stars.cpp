@@ -41,14 +41,18 @@ void print_star(int x,int y)
 void display()
 {
 	glClear( GL_COLOR_BUFFER_BIT );	
-	int x,y;
+	int x,y,i,j;
 	x=300;
 	y=500;
-	for(i=0;i<=60;i=i+6)
+	for(i=0;i<=150;i=i+10)
 	{
 		print_star(x+i,y-i);
 		print_star(x,y-i);
 	}
+	for(j=0;j<=150;j=j+10)
+{
+print_star(x+j,y-i);
+}
 }
 int main(int argc, char**argv) 
 {
