@@ -2,32 +2,28 @@
 using namespace std;
 int main()
 {
-	int r,x,y,p;
+	int x,y,r,p;
+	cout<<"Enter Radius of the circle: ";
 	cin>>r;
-	x=0; //x = xc
-	y=r; //y = yc+r
-	p = 3-2*r; //Initial Decision Parameter
-	do
+	x=0;
+	y=r;
+	p=3-2*r;
+	while(x<=y)
 	{
-		///
 		cout<<"\n\n";
-		cout<<"X: "<<x<<endl;
-		cout<<"Y: "<<y<<endl;
-		cout<<"P: "<<p<<endl;
-		///
-	if(p<0)
-	{
-		p = p + 4*x + 6;
+		cout<<"Value of X: "<<x<<endl;
+		cout<<"Value of y: "<<y<<endl;
+		cout<<"Value of p: "<<p<<endl;
+		cout<<"\n\n";
+		if(p<0)
+		{
+			p=p+4*x+6;
+		}
+		else
+		{
+			p=p+4*x-4*y+10;
+			y--;
+		}
+		x++;
 	}
-	else
-	{
-		p = p + 4*x - 4*y + 10;
-		y--;
-	}
-	x++;
-	}while(x!=y);
-	cout<<"\n\n";
-		cout<<"X: "<<x<<endl;
-		cout<<"Y: "<<y<<endl;
-		cout<<"P: "<<p<<endl;
 }
