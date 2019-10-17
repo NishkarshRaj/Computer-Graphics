@@ -11,6 +11,8 @@
   [* Direct/Polynomial Method](Scan%20converting%20a%20circle/Polynomial_circle.cpp)
   
   [* Mid-Point Circle Method](Scan%20converting%20a%20circle/Mid_point_circle.cpp)
+  
+  [* Bresenham's Circle Drawing](Scan%20converting%20a%20circle/Bresenham.cpp)
 
 [3. Scan converting an Ellipse](Scan%20converting%20an%20ellipse)
 
