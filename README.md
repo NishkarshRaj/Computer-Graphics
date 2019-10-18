@@ -20,7 +20,9 @@
   
 [4. OpenGL](OpenGL/)
 
-[5. 2-D Transformations](2-D%20Transformations)
+[5. Two Dimensional Transformations](2-D%20Transformations)
+
+[6. Liang Barksy Clipping Algorithm](Liang%20Barsky%20Line%20Clipping)
   
 # License:
 
