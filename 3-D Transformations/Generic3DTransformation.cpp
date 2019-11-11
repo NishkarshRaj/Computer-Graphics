@@ -16,8 +16,9 @@ double cosine(double x)
 	x=x/180;
 	return cos(x);
 }
-double atan(double slope)
+double arctan(double slope)
 {
+	double theta;
 	//Arc tan code for converting slope to angle of slope to rotate parallel to axis
 	theta=atan(slope);
 	theta=theta*180;
@@ -115,13 +116,17 @@ int main()
 			//Doing reflection about X axis
 			//Pass through origin
 			y=y-c;
-			theta=atan(m);
+			theta=arctan(m);
 			//Clockwise rotation wrt X axis -> sin --- (-sin)
 			x=x*cosine(theta)+y*sine(theta);
 			y=y*cosine(theta)-x*sine(theta);
 			//Reflection---> y=-y
 			y=y*(-1);
 			//Anti clockwise rotation
+			x=x*cosine(theta)-y*sine(theta);
+			y=x*sine(theta)+y*cosine(theta);
+			//Inverse Translate
+			y=y+c;
 			break;
 		case 10:
 			break;
