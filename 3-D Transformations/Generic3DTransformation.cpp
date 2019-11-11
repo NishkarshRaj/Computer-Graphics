@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	int flag,x,y,z,ch;
+	int flag,x,y,z,ch,tx,ty,tz;
 	cout<<"3D Transformation"<<endl;
 	cout<<"Enter Point (x,y,z): ";
 	cin>>x>>y>>z;
@@ -31,6 +31,12 @@ int main()
 	switch(ch)
 	{
 		case 1:
+			cout<<"Translation of point"<<endl;
+			cout<<"Enter the translation factors"<<endl;
+			cin>>tx>>ty>>tz;
+			x=x+tx;
+			y=y+ty;
+			z=z+tz;
 			break;
 		case 2:
 			break;
@@ -59,5 +65,9 @@ int main()
 			break;							
 		default: cout<<"Wrong choice entered"<<endl;			
 	}
+	cout<<"Updated co-ordinates"<<endl;
+	cout<<"X: "<<x<<endl;
+	cout<<"Y: "<<y<<endl;
+	cout<<"Z: "<<z<<endl;
 	}while(flag==0);
 }
