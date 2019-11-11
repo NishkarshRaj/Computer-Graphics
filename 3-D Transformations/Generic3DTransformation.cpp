@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	double flag,x,y,z,tx,ty,tz;
+	double flag,x,y,z,tx,ty,tz,S;
 	int ch;
 	cout<<"3D Transformation"<<endl;
 	cout<<"Enter Point (x,y,z): ";
@@ -46,6 +46,12 @@ int main()
 		case 4:
 			break;
 		case 5:
+			cout<<"Scaling of point"<<endl;
+			cout<<"Enter the scaling factor: ";
+			cin>>S;
+			x=x*S;
+			y=y*S;
+			z=z*S;
 			break;
 		case 6:
 			break;
