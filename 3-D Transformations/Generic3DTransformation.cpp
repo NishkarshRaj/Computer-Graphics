@@ -36,6 +36,7 @@ int main()
 	cout<<"6) Reflection about XY axis"<<endl;
 	cout<<"7) Reflection about YZ axis"<<endl;
 	cout<<"8) Reflection about ZX axis"<<endl;
+	//9 and 10th can only be done on 2D transformation and not on 3D and it is thus only done on X,Y co-ordinates
 	cout<<"9) Reflection about Line y=mx+c"<<endl;
 	cout<<"10) Reflection about Line ax + by + c = 0"<<endl;
 	cout<<"11) Shear about edge"<<endl;
