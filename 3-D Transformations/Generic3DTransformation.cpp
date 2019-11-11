@@ -1,5 +1,6 @@
 #include<iostream>
 #include<math.h>
+#define PI 3.14159265
 using namespace std;
 //Function for sine!!!
 double sine(double x)
@@ -15,9 +16,17 @@ double cosine(double x)
 	x=x/180;
 	return cos(x);
 }
+double atan(double slope)
+{
+	//Arc tan code for converting slope to angle of slope to rotate parallel to axis
+	theta=atan(slope);
+	theta=theta*180;
+	theta=theta/PI;
+	return theta;
+}
 int main()
 {
-	double flag,x,y,z,tx,ty,tz,S,theta,sxy,sxz,syx,syz,szx,szy,x1,y1,z1;
+	double flag,x,y,z,tx,ty,tz,S,theta,sxy,sxz,syx,syz,szx,szy,x1,y1,z1,m,c;
 	int ch;
 	cout<<"3D Transformation"<<endl;
 	cout<<"Enter Point (x,y,z): ";
@@ -97,6 +106,22 @@ int main()
 			y=y*(-1);
 			break;
 		case 9:
+			cout<<"Reflection about line y=mx+c"<<endl;
+			cout<<"Define line in terms of Y=mX+c form"<<endl;
+			cout<<"Enter slope: ";
+			cin>>m;
+			cout<<"Enter Intercept: ";
+			cin>>c;
+			//Doing reflection about X axis
+			//Pass through origin
+			y=y-c;
+			theta=atan(m);
+			//Clockwise rotation wrt X axis -> sin --- (-sin)
+			x=x*cosine(theta)+y*sine(theta);
+			y=y*cosine(theta)-x*sine(theta);
+			//Reflection---> y=-y
+			y=y*(-1);
+			//Anti clockwise rotation
 			break;
 		case 10:
 			break;
