@@ -75,6 +75,8 @@ int main()
 			z=z*(-1);
 			break;
 		case 8:
+			cout<<"Reflection about YZ Plane"<<endl;
+			x=x*(-1);
 			break;
 		case 9:
 			break;
