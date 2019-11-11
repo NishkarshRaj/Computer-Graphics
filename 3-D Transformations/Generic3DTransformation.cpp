@@ -17,7 +17,7 @@ double cosine(double x)
 }
 int main()
 {
-	double flag,x,y,z,tx,ty,tz,S,theta;
+	double flag,x,y,z,tx,ty,tz,S,theta,sxy,sxz,syx,syz,szx,szy;
 	int ch;
 	cout<<"3D Transformation"<<endl;
 	cout<<"Enter Point (x,y,z): ";
@@ -101,6 +101,27 @@ int main()
 		case 10:
 			break;
 		case 11:
+			cout<<"Shear about Edge\n";
+			cout<<"X shear wrt Y [0,1]: ";
+			cin>>sxy;
+			cout<<"Shear about Edge\n";
+			cout<<"X shear wrt Z [0,1]: ";
+			cin>>sxz;
+			cout<<"Shear about Edge\n";
+			cout<<"Y shear wrt X [0,1]: ";
+			cin>>syx;
+			cout<<"Shear about Edge\n";
+			cout<<"Y shear wrt Z [0,1]: ";
+			cin>>syz;
+			cout<<"Shear about Edge\n";
+			cout<<"Z shear wrt X [0,1]: ";
+			cin>>szx;
+			cout<<"Shear about Edge\n";
+			cout<<"Z shear wrt Y [0,1]: ";
+			cin>>szy;
+			x=x+(y*sxy)+(z*sxz);
+			y=y+(x*syx)+(z*syz);
+			z=z+(x*szx)+(y*szy);
 			break;	
 		case 12:
 			break;
