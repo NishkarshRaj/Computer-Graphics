@@ -17,4 +17,5 @@ int main()
 	cin>>xmax>>ymax;
 	cout<<"Enter the Xmin, Ymin of Clipping Window: ";
 	cin>>xmin>>ymin;
+	////////Clipping
 }
