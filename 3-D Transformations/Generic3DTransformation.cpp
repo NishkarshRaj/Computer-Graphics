@@ -1,5 +1,20 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
+//Function for sine!!!
+double sine(double x)
+{
+	x=x*3.14;
+	x=x/180;
+	return sin(x);
+}
+//Function for cosine
+double cosine(double x)
+{
+	x=x*3.14;
+	x=x/180;
+	return cos(x);
+}
 int main()
 {
 	double flag,x,y,z,tx,ty,tz,S;
