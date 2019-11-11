@@ -33,9 +33,9 @@ int main()
 	cout<<"3) Rotation about Y Axis"<<endl;
 	cout<<"4) Rotation about Z Axis"<<endl;
 	cout<<"5) Scaling"<<endl;
-	cout<<"6) Reflection about X axis"<<endl;
-	cout<<"7) Reflection about Y axis"<<endl;
-	cout<<"8) Reflection about Z axis"<<endl;
+	cout<<"6) Reflection about XY axis"<<endl;
+	cout<<"7) Reflection about YZ axis"<<endl;
+	cout<<"8) Reflection about ZX axis"<<endl;
 	cout<<"9) Reflection about Line y=mx+c"<<endl;
 	cout<<"10) Reflection about Line ax + by + c = 0"<<endl;
 	cout<<"11) Shear about edge"<<endl;
@@ -71,6 +71,8 @@ int main()
 		case 6:
 			break;
 		case 7:
+			cout<<"Reflection about XY Plane"<<endl;
+			z=z*(-1);
 			break;
 		case 8:
 			break;
