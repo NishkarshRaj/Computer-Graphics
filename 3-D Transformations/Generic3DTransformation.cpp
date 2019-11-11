@@ -69,14 +69,16 @@ int main()
 			z=z*S;
 			break;
 		case 6:
-			break;
-		case 7:
 			cout<<"Reflection about XY Plane"<<endl;
 			z=z*(-1);
 			break;
-		case 8:
+		case 7:
 			cout<<"Reflection about YZ Plane"<<endl;
 			x=x*(-1);
+			break;
+		case 8:
+			cout<<"Reflection about ZX Plane"<<endl;
+			y=y*(-1);
 			break;
 		case 9:
 			break;
