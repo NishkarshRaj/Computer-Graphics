@@ -27,7 +27,7 @@ double arctan(double slope)
 }
 int main()
 {
-	double flag,x,y,z,tx,ty,tz,S,theta,sxy,sxz,syx,syz,szx,szy,x1,y1,z1,m,c;
+	double flag,x,y,z,tx,ty,tz,S,theta,sxy,sxz,syx,syz,szx,szy,x1,y1,z1,m,c,A,B,C;
 	int ch;
 	cout<<"3D Transformation"<<endl;
 	cout<<"Enter Point (x,y,z): ";
@@ -129,6 +129,30 @@ int main()
 			y=y+c;
 			break;
 		case 10:
+			cout<<"Reflection about line ax+by+c"<<endl;
+			//converting to form y=-a/b*x -c/b
+			cout<<"Enter a: ";
+			cin>>A;
+			cout<<"Enter b: ";
+			cin>>B;
+			cout<<"Enter c: ";
+			cin>>C;
+			m=A/B;
+			m=m*(-1);
+			c=C/B;
+			c=c*(-1);  
+			////
+			y=y-c;
+			x=x*cosine(theta)+y*sine(theta);
+			y=y*cosine(theta)-x*sine(theta);
+			//Reflection---> y=-y
+			y=y*(-1);
+			//Anti clockwise rotation
+			x=x*cosine(theta)-y*sine(theta);
+			y=x*sine(theta)+y*cosine(theta);
+			//Inverse Translate
+			y=y+c;
+			////
 			break;
 		case 11:
 			cout<<"Shear about Edge\n";
