@@ -4,6 +4,7 @@
 #define PI 3.14159265
 #include<iostream>
 using namespace std;
+int x,y,z;
 double sine(double x)
 {
 	x=x*3.14;
@@ -40,11 +41,8 @@ void display()
 	glClear( GL_COLOR_BUFFER_BIT );
 	glColor3f(1, 1, 1);
 	////////////////////////
-	double flag,x,y,z,tx,ty,tz,S,theta,sxy,sxz,syx,syz,szx,szy,x1,y1,z1,m,c,A,B,C;
+	double flag,tx,ty,tz,S,theta,sxy,sxz,syx,syz,szx,szy,x1,y1,z1,m,c,A,B,C;
 	int ch;
-	cout<<"3D Transformation"<<endl;
-	cout<<"Enter Point (x,y,z): ";
-	cin>>x>>y>>z;
 	flag=0;
 	glBegin(GL_POINTS);
 	glVertex3f(x,y,z);
@@ -234,6 +232,9 @@ void display()
 }
 int main(int argc, char**argv) 
 {
+cout<<"3D Transformation"<<endl;
+	cout<<"Enter Point (x,y,z): ";
+	cin>>x>>y>>z;
     glutInit(&argc, argv); 
     glutInitDisplayMode( GLUT_SINGLE | GLUT_RGB ); 
     glutInitWindowSize( 700,700 ); 
