@@ -2,7 +2,8 @@
 using namespace std;
 int main()
 {
-	int flag,x,y,z,ch,tx,ty,tz;
+	double flag,x,y,z,tx,ty,tz;
+	int ch;
 	cout<<"3D Transformation"<<endl;
 	cout<<"Enter Point (x,y,z): ";
 	cin>>x>>y>>z;
