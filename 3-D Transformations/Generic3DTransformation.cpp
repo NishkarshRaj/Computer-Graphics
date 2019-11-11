@@ -17,7 +17,7 @@ double cosine(double x)
 }
 int main()
 {
-	double flag,x,y,z,tx,ty,tz,S;
+	double flag,x,y,z,tx,ty,tz,S,theta;
 	int ch;
 	cout<<"3D Transformation"<<endl;
 	cout<<"Enter Point (x,y,z): ";
@@ -59,6 +59,11 @@ int main()
 		case 3:
 			break;
 		case 4:
+			cout<<"Rotation About Z axis"<<endl;
+			cout<<"Enter Rotation Angle: ";
+			cin>>theta;
+			x = x*cosine(theta) - y*sine(theta);
+			y = y*cosine(theta) + x*sine(theta);
 			break;
 		case 5:
 			cout<<"Scaling of point"<<endl;
