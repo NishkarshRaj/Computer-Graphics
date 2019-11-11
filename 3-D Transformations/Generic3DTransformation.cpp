@@ -55,6 +55,11 @@ int main()
 			z=z+tz;
 			break;
 		case 2:
+			cout<<"Rotation About X axis"<<endl;
+			cout<<"Enter Rotation Angle: ";
+			cin>>theta;
+			y = y*cosine(theta) - z*sine(theta);
+			z = z*cosine(theta) + y*sine(theta);
 			break;
 		case 3:
 			cout<<"Rotation About Y axis"<<endl;
