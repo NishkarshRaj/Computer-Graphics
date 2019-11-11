@@ -26,7 +26,7 @@ int main()
 	cout<<"12) Shear about vertex"<<endl;
 	cout<<"13) Exit"<<endl;
 	cout<<"\n"<<endl;
-	cout<<"Enter your choice: "<<endl;
+	cout<<"Enter your choice: ";
 	cin>>ch;
 	switch(ch)
 	{
