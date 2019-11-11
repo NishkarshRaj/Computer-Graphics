@@ -17,7 +17,7 @@ double cosine(double x)
 }
 int main()
 {
-	double flag,x,y,z,tx,ty,tz,S,theta,sxy,sxz,syx,syz,szx,szy;
+	double flag,x,y,z,tx,ty,tz,S,theta,sxy,sxz,syx,syz,szx,szy,x1,y1,z1;
 	int ch;
 	cout<<"3D Transformation"<<endl;
 	cout<<"Enter Point (x,y,z): ";
@@ -124,6 +124,34 @@ int main()
 			z=z+(x*szx)+(y*szy);
 			break;	
 		case 12:
+			cout<<"Shear about Vertex\n";
+			cout<<"Enter the pivot point (x,y,z): ";
+			cin>>x1>>y1>>z1;
+			x=x-x1;
+			y=y-y1;
+			z=z-z1;
+			cout<<"X shear wrt Y [0,1]: ";
+			cin>>sxy;
+			cout<<"Shear about Edge\n";
+			cout<<"X shear wrt Z [0,1]: ";
+			cin>>sxz;
+			cout<<"Shear about Edge\n";
+			cout<<"Y shear wrt X [0,1]: ";
+			cin>>syx;
+			cout<<"Shear about Edge\n";
+			cout<<"Y shear wrt Z [0,1]: ";
+			cin>>syz;
+			cout<<"Shear about Edge\n";
+			cout<<"Z shear wrt X [0,1]: ";
+			cin>>szx;
+			cout<<"Shear about Edge\n";
+			cout<<"Z shear wrt Y [0,1]: ";
+			x=x+(y*sxy)+(z*sxz);
+			y=y+(x*syx)+(z*syz);
+			z=z+(x*szx)+(y*szy);
+			x=x+x1;
+			y=y+y1;
+			z=z+z1;
 			break;
 		case 13: cout<<"Exiting the code";
 			flag=1;
