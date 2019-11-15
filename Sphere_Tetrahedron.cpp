@@ -19,7 +19,7 @@ void display() {
    glTranslatef(-1.5f, 0.0f, -6.0f);  // Move left and into the screen
  /////////////////////////////////// Sphere
  int i;
- glBegin(GL_POINTS);                
+ glBegin(GL_POLYGON);                
  		//YZ Circle
       glColor3f(1.0f, 1.0f, 1.0f); 
        	for(i=0;i<1000;++i)
