@@ -38,6 +38,7 @@ glFlush();
 //Keyboard Event
 void event1(unsigned char key, int x, int y )
 {
+	glClear(GL_COLOR_BUFFER_BIT);
 //overwrite Circle triangle with bg color
 	x = Xc - r;
 	y = Yc;
