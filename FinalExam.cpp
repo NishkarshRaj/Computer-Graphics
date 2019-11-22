@@ -39,6 +39,14 @@ glFlush();
 void event1(unsigned char key, int x, int y )
 {
 	glClear(GL_COLOR_BUFFER_BIT);
+//White Square
+glColor3f(1,1,1);
+glBegin(GL_POLYGON);
+glVertex2d(200,200);
+glVertex2d(500,200);
+glVertex2d(500,500);
+glVertex2d(200,500);
+glEnd();
 //overwrite Circle triangle with bg color
 	x = Xc - r;
 	y = Yc;
