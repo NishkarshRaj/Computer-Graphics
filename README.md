@@ -4,6 +4,10 @@
 
 [2. OpenGL Codes](OpenGL)
 
+# How to Contribute :tada:
+
+[Contribution Guidelines](CONTRIBUTING.md)
+
 # To be Added:
 
 1. OpenGL Code for Bezier Curves
