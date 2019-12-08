@@ -29,3 +29,34 @@ $ g++ <filename.ext> -lglut -lGLU -lGL
 ```
 ./a.out
 ```
+
+# Standard Code form
+```c
+#include<GL/glut.h>
+#include<GL/gl.h>
+void init()
+{
+glClearColor(R,G,B,Transparency);
+glMatrixMode(GL_PROJECTIONS);
+gluOrtho2d(xmin,xmax,ymin,ymax);
+}
+void display()
+{
+glClear(GL_COLOR_BUFFER_BIT);
+glColor3f(R,G,B);
+glBegin(PRIMITIVE SHAPE);
+glVertex3d(X,Y,Z);
+glEnd();
+glFlush();
+}
+int main(int argc, char **argv)
+{
+glutInit(&argc, argv); 
+    glutInitDisplayMode( GLUT_SINGLE | GLUT_RGB ); 
+    glutInitWindowSize( xmax,ymax ); 
+    glutCreateWindow("Window Name"); 
+    init();  
+glutDisplayFunc();
+glutMainLoop();
+}
+```
