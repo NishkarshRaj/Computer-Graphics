@@ -14,6 +14,8 @@
 2. OpenGL Code for B-Spline Curves
 3. OpenGL Code for Fractals
 4. Setting GitHub Actions for output of newly added codes
+5. Clipping Algorithms
+6. Polygon method for Ellipse
   
 # License:
 
