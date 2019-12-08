@@ -16,11 +16,21 @@
  
 4. Clipping Algorithms
  * Line Clipping
+ 
   i. Cohen Sutherland
+  
   ii. Liang Barskey
+  
  * Polygon Clipping
+ 
   i. Sutherland Hodgeman
 
 5. 2-D Transformation
+ * Translation
+ * Rotation
+ * Scaling
+ * Reflection
+ * Shearing
 
 6. 3-D Transformation
+* Generic Code with 10+ Operations using Switch funciton
