@@ -12,8 +12,14 @@
  * Brensenham Circle Drawing
 
 3. Scan Conversion of Ellipse
-
+ * Mid-Point Ellipse Algorithm
+ 
 4. Clipping Algorithms
+ * Line Clipping
+  i. Cohen Sutherland
+  ii. Liang Barskey
+ * Polygon Clipping
+  i. Sutherland Hodgeman
 
 5. 2-D Transformation
 
