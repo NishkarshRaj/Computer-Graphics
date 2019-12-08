@@ -23,6 +23,13 @@
 [5. Two Dimensional Transformations](2-D%20Transformations)
 
 [6. Liang Barksy Clipping Algorithm](Liang%20Barsky%20Line%20Clipping)
+
+# To be Added:
+
+1. OpenGL Code for Bezier Curves
+2. OpenGL Code for B-Spline Curves
+3. OpenGL Code for Fractals
+4. Setting GitHub Actions for output of newly added codes
   
 # License:
 
