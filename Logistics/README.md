@@ -6,6 +6,10 @@
   * Bresenham's Line Drawing
 
 2. Scan Conversion of Circle
+ * Helper Square Root function
+ * Polynomial Method
+ * Mid-Point Circle algorithm
+ * Brensenham Circle Drawing
 
 3. Scan Conversion of Ellipse
 
