@@ -16,6 +16,7 @@
 4. Setting GitHub Actions for output of newly added codes
 5. Clipping Algorithms
 6. Polygon method for Ellipse
+7. Visible Surface Detection
   
 # License:
 
