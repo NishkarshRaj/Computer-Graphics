@@ -22,4 +22,4 @@
 
 [MIT License](LICENSE) maintained by @NishkarshRaj
 
-Feel free to reuse and distribute :smile: :tada:
+Feel free to reuse and distribute :smile:
