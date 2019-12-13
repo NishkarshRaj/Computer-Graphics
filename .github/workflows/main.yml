@@ -1,9 +1,9 @@
-name: A workflow for my Hello World file
+name: OpenGL Output
 on: push
 
 jobs:
   build:
-    name: Hello world action
+    name: OpenGL
     runs-on: ubuntu-latest    
     steps:
     - uses: actions/checkout@master
