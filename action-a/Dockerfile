@@ -6,5 +6,5 @@ WORKDIR /root/nish/
 RUN apt-get -y update
 RUN apt-get -y install g++
 RUN apt-get -y install freeglut3-dev
-RUN chmod +x /script1.sh
+RUN chmod +x /root/nish/script1.sh
 CMD ./script1.sh
