@@ -8,7 +8,7 @@
 
 [Contribution Guidelines](CONTRIBUTING.md)
 
-# To be Added:
+## To be Added:
 
 1. OpenGL Code for Bezier Curves
 2. OpenGL Code for B-Spline Curves
