@@ -1,10 +1,11 @@
 FROM ubuntu
 RUN apt-get -y update
+RUN apt-gey -y install apt-utils
 RUN apt-get -y install g++
 RUN apt-get -y install freeglut3-dev
-RUN mkdir /root/nish
-ADD script1.sh /root/nish/script1.sh
-ADD Hut.cpp /root/nish/Hut.cpp
-WORKDIR /root/nish
-RUN chmod +x /root/nish/script1.sh
-CMD ./root/nish/script1.sh
+RUN mkdir /nish
+ADD script1.sh /nish/script1.sh
+ADD Hut.cpp /nish/Hut.cpp
+WORKDIR /nish
+RUN chmod +x /nish/script1.sh
+CMD ./nish/script1.sh

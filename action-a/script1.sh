@@ -1,3 +1,3 @@
-g++ /root/nish/Hut.cpp -lglut -lGLU -lGL;
-cd /root/nish
+g++ /nish/Hut.cpp -lglut -lGLU -lGL;
+cd /nish
 ./a.out;
