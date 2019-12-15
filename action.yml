@@ -1,0 +1,12 @@
+name: 'OpenGL Output for source code commit'
+description: 'Create OpenGL output for code using Freeglut package on Ubuntu'
+author: 'Nishkarsh Raj'
+inputs:
+  src:
+    description: '.cpp file put in action-a/'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'check-circle'
+  color: 'green'
