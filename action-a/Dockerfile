@@ -9,4 +9,3 @@ ADD Hut.cpp /nish/Hut.cpp
 WORKDIR /nish
 RUN chmod +x /nish/script1.sh
 CMD ./nish/script1.sh
-CMD echo "Dockerfile succesfully executed. Now running the Shell Script"
