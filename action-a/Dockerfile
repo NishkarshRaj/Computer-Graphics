@@ -9,5 +9,5 @@ ADD script1.sh /nish/script1.sh
 ADD Hut.cpp /nish/Hut.cpp
 RUN pwd
 RUN ls
-RUN chmod +x /nish/script1.sh
-CMD ./nish/script1.sh
+RUN chmod +x script1.sh
+CMD ./script1.sh
