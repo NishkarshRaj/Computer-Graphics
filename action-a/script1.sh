@@ -1,4 +1,3 @@
-ls
-g++ /nish/Hut.cpp -lglut -lGLU -lGL;
-cd /nish
-./a.out;
+pwd
+g++ action-a/Hut.cpp -lglut -lGLU -lGL;
+ls -ltr
