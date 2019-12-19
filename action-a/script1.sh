@@ -1,5 +1,3 @@
-pwd
-ls
-g++ /nish/Hut.cpp -lglut -lGLU -lGL;
-cd /nish
+g++ action-a/Hut.cpp -lglut -lGLU -lGL;
+ls -ltr
 ./a.out;
