@@ -4,9 +4,13 @@
 
 [2. OpenGL Codes](OpenGL)
 
-## How to Contribute :tada:
+## How to Contribute :
 
 [Contribution Guidelines](CONTRIBUTING.md)
+
+## Future Scoe
+
+These [things](future.md) are to be added in the future.
 
 # License:
 
