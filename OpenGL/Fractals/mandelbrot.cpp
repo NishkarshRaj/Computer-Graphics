@@ -47,7 +47,7 @@ void mandelbrot_construction( int left, int right, int top, int bottom){
             std::complex<double> comp( C_a, C_b ); 
 
             int iteration = mandelbrot_formula(comp);
-            double color = 1 - (double)(iteration/ MAX_VALUE);
+            double color = 1 - ((double)iteration/ MAX_VALUE);
 
             glColor3f(color,color,color);
             glVertex2i(b,c); 
