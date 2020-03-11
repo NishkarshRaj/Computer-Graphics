@@ -3,6 +3,9 @@
 #include <GL/glut.h>
 #include <GL/gl.h>
 #include <complex> 
+#include <iostream> //Testing 
+
+using namespace std; 
 
 /*
     The Mandelbrot is solved recursively within the complex coordinate 
@@ -19,13 +22,13 @@
 #define MAX_VALUE 100 
 
 
-int mandelbrot_formula( std::complex<double> c ){
- double z = 0;
+int mandelbrot_formula( std::complex<double> c ){   
+ std::complex<double> z (0,0);
  int n = 0; //Step Number
 
- while ( abs(z) <= MAX_VALUE && n <= MAX_VALUE ){
+ while ( abs(z) < 2 && n < MAX_VALUE ){
  //Denote since C is a complex number and can be negative then z could also be negative 
-    z = (z*z)+c; 
+    z = (z*z)+ c; 
     n++;
  }
  return n; 
@@ -33,35 +36,50 @@ int mandelbrot_formula( std::complex<double> c ){
 
 void mandelbrot_construction( int left, int right, int top, int bottom){
 
-    for ( int b = 0; b< MAX_WIDTH; b++){
-        for( int c = 0; c< MAX_HEIGHT; c++){
-            std::complex<double> comp( left + ( b * (right-left))/MAX_WIDTH, bottom + (c * (top-bottom))/MAX_HEIGHT ); 
+     glBegin(GL_POINTS);
+    for ( int b = 0; b< MAX_WIDTH; ++b){
+        for( int c = 0; c< MAX_HEIGHT; ++c){
+            
+            //Convert the Pixel's Cartesian Coordinates to Complex 
+            double C_a = left + ((double)b/MAX_WIDTH)*(right-left);
+            double C_b = top + ((double)c/MAX_HEIGHT)*(bottom-top); 
+
+            std::complex<double> comp( C_a, C_b ); 
 
             int iteration = mandelbrot_formula(comp);
-            double shade = 255 - int(iteration*255/ MAX_VALUE);
-
-            glColor3f(shade,shade,shade);
-            glVertex3f( b,c,0 ); 
-
+            
+            if( iteration == MAX_VALUE){
+                glColor3f(0,0,0);
+                glVertex2i(b,c); 
+            }
         } 
     }
+            glEnd();
+            glFlush(); 
 
 }
 
 void display(void){
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(0,0,0);
-    glBegin(GL_POINTS);
-    mandelbrot_construction(-2,1,-1,1);
-    glEnd();
-    glFlush(); 
+    mandelbrot_construction(-2,1,1,-1);
 }
+
+void init() {
+	glClearColor(1.0, 1.0, 1.0, 0.0);
+	glColor3f(0.0, 0.0, 0.0);
+	glPointSize(1.0);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(0, MAX_WIDTH, 0, MAX_HEIGHT);
+}
+
 int main(int argc, char **argv, char**arg){
     glutInit(&argc,argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowPosition(700,700);
+	glutInitWindowPosition(MAX_WIDTH/2, MAX_HEIGHT/2);
 	glutInitWindowSize(MAX_WIDTH,MAX_HEIGHT);
 	glutCreateWindow("Mandelbrot");
+    init();
 	glutDisplayFunc(display);
 	glutMainLoop();
 	return 0;
