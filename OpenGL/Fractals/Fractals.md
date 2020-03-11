@@ -12,8 +12,22 @@ Fractals are self repeating mathematical constructs. That lead to complex models
 
 ### This folder contains the following implementations of Fractals:
 
-- Mandelbrot :o: ( March 11, 2020 )
+- Mandelbrot :white_check_mark: ( March 11, 2020 )
+    - Additional Features to be added: Improved shading :wrench:
+- Julia Set :o: (March 18, 2020 )
 - Koch Snowflake :o: ( April 7, 2020 )
 - B-Trees (Grammar Generated) :o: ( April 7, 2020 )
     
 >*Each of the Fractal designs may have a unquie compilation signature which will be specified within a header at the top of each file.*
+
+--- 
+## Resources 
+
+#### Mandelbrot Set
+* **General Information**
+    * [Mandelbrot Set](https://en.wikipedia.org/wiki/Mandelbrot_set)
+    * [Mathematical Implementation of the Mandelbrot Set](https://mathworld.wolfram.com/MandelbrotSet.html)
+    * [Complex Numbers](https://en.wikipedia.org/wiki/Complex_plane)
+    * [Complex Plane](https://mathworld.wolfram.com/ComplexPlane.html)
+    * [Converting Cartesian Plane to Complex Plane](http://warp.povusers.org/Mandelbrot/)
+* ** 
