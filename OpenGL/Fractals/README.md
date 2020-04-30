@@ -30,6 +30,7 @@ Fractals are self repeating mathematical constructs. That lead to complex models
     * [Complex Numbers](https://en.wikipedia.org/wiki/Complex_plane)
     * [Complex Plane](https://mathworld.wolfram.com/ComplexPlane.html)
     * [Converting Cartesian Plane to Complex Plane](http://warp.povusers.org/Mandelbrot/)
+<<<<<<< HEAD:OpenGL/Fractals/Fractals.md
 
 #### Julia Set
 * **General Information**
@@ -39,3 +40,6 @@ Fractals are self repeating mathematical constructs. That lead to complex models
     * [Complex Plane](https://mathworld.wolfram.com/ComplexPlane.html)
     * [Converting Cartesian Plane to Complex Plane](http://warp.povusers.org/Mandelbrot/)
 * ** 
+=======
+* ** 
+>>>>>>> 9d17c2eaefe94ea2e0b04abf5c3bd283edfca37f:OpenGL/Fractals/README.md
