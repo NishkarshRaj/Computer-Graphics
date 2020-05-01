@@ -1,12 +1,3 @@
-#include <math.h>
-#include <stdio.h>
-#include <GL/glut.h>
-#include <GL/gl.h>
-#include <complex> 
-#include <iostream> //Testing 
-
-using namespace std; 
-
 /*
     The Julia set is solved recursively within the complex coordinate 
     plane where each coordinate is represented as a variable "Z". With 
@@ -18,11 +9,28 @@ using namespace std;
     defined within OpenGL to that of a complex plane. Denote C is a constant that 
     change manually giving the Julia Set different appearances 
 */
+
+//Internal Libraries 
+#include <math.h>
+#include <stdio.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
+#include <complex> 
+
+using namespace std; 
+
+//Screen Size Macros 
 #define MAX_WIDTH 500 
 #define MAX_HEIGHT 500 
+
+//Iteration Marcos 
 #define MAX_VALUE 100 
 
+/*
+    This function uses the a predefine julia equations ( that can be changed below)
+    It will tell you which iteration the complex number Z lies on with the Julia Set. 
 
+*/
 int julia_formula( std::complex<double> z ){   
  std::complex<double> c (-0.221,-0.713); // Defining the constant in form a+bi 
  int n = 0; //Step Number
@@ -35,6 +43,11 @@ int julia_formula( std::complex<double> z ){
  return n; 
 }
 
+/*
+    This function will iterate through all points on the screen to calculate where in the 
+    julia the complex Z value will exist. Then plot the point in a greyscale 
+    
+*/
 void julia_construction( int left, int right, int top, int bottom){
 
      glBegin(GL_POINTS);
@@ -62,7 +75,7 @@ void julia_construction( int left, int right, int top, int bottom){
 
 void display(void){
     glClear(GL_COLOR_BUFFER_BIT);
-    julia_construction(-2,2,2,-2);
+    julia_construction(-2,2,2,-2); //Start the Julia construction 
 }
 
 void init() {

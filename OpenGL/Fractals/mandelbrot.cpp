@@ -1,12 +1,3 @@
-#include <math.h>
-#include <stdio.h>
-#include <GL/glut.h>
-#include <GL/gl.h>
-#include <complex> 
-#include <iostream> //Testing 
-
-using namespace std; 
-
 /*
     The Mandelbrot is solved recursively within the complex coordinate 
     plane where each coordinate is represented as a variable "C". With 
@@ -17,11 +8,29 @@ using namespace std;
     Within this code we will convert from the typical Cartesian Plane (i.e. x, y)
     defined within OpenGL to that of a complex plane. 
 */
+
+//Internal Libraries 
+#include <math.h>
+#include <stdio.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
+#include <complex> 
+
+using namespace std; 
+
+//Screen Size Macros
 #define MAX_WIDTH 500 
 #define MAX_HEIGHT 500 
+
+//Iteration Marcos 
 #define MAX_VALUE 100 
 
+/*
+    This function uses the famous mandelbrot equations 
+    It will tell you which iteration the complex
+    number C lies on with the mandelbrot Set. 
 
+*/
 int mandelbrot_formula( std::complex<double> c ){   
  std::complex<double> z (0,0);
  int n = 0; //Step Number
@@ -34,6 +43,11 @@ int mandelbrot_formula( std::complex<double> c ){
  return n; 
 }
 
+/*
+    This function will iterate through all points on the screen to calculate where in the 
+    Mandelbrot set the complex C value will exist. Then plot the point in a greyscale 
+    
+*/
 void mandelbrot_construction( int left, int right, int top, int bottom){
 
      glBegin(GL_POINTS);
@@ -61,7 +75,7 @@ void mandelbrot_construction( int left, int right, int top, int bottom){
 
 void display(void){
     glClear(GL_COLOR_BUFFER_BIT);
-    mandelbrot_construction(-2,1,1,-1);
+    mandelbrot_construction(-2,1,1,-1); //Start the Mandelbrot construction 
 }
 
 void init() {
