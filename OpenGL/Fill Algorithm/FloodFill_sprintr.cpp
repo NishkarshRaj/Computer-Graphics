@@ -2,6 +2,9 @@
 #include <GL/glut.h>
 #include <GL/gl.h>
 
+const int WIDTH = 480;
+const int HEIGHT = 640;
+
 struct Point {
 	GLint x;
 	GLint y;
@@ -56,7 +59,7 @@ Color getPixelColor(GLint x, GLint y) {
 void setPixelColor(GLint x, GLint y, Color color) {
 	glColor3f(color.r, color.g, color.b);
 	glBegin(GL_POINTS);
-		glVertex2i(x, y);
+	glVertex2i(x, y);
 	glEnd();
 	glFlush();
 }
@@ -80,8 +83,16 @@ void onMouseClick(int button, int state, int x, int y)
 {
 	Color newColor = {1.0f, 0.0f, 0.0f};
 	Color oldColor = {1.0f, 1.0f, 1.0f};
-
-	floodFill(101, 199, oldColor, newColor);
+	int halfWidth = WIDTH/2;
+	if(y > halfWidth)
+	{
+		y -= (y-halfWidth)*2;
+	}
+	else
+	{
+		y += (halfWidth-y)*2;
+	}
+	floodFill(x, y, oldColor, newColor);
 }
 
 void display(void) {
@@ -104,7 +115,7 @@ int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
-	glutInitWindowSize(640, 480);
+	glutInitWindowSize(HEIGHT, WIDTH);
 	glutInitWindowPosition(200, 200);
 	glutCreateWindow("Open GL");
 	init();

@@ -2,6 +2,8 @@
 #include <GL/glut.h>
 #include <GL/gl.h>
 
+const int WIDTH = 700;
+const int HEIGHT = 700;
 //Structure 1: Point
 struct Point 
 {
@@ -63,9 +65,17 @@ void onMouseClick(int button, int state, int x, int y)
 	Color fillColor = {1.0f, 0.0f, 0.0f};		// red color will be filled
 	Color boundaryColor = {0.0f, 0.0f, 0.0f}; // black- boundary
 
-	Point p = {350,350}; // a point inside the square
+	int halfWidth = WIDTH/2;
+	if(y > halfWidth)
+	{
+		y -= (y-halfWidth)*2;
+	}
+	else
+	{
+		y += (halfWidth-y)*2;
+	}
 
-	BoundaryFill(p.x, p.y, fillColor, boundaryColor);
+	BoundaryFill(x, y, fillColor, boundaryColor);
 }
 
 
@@ -116,7 +126,7 @@ int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
-	glutInitWindowSize(700, 700);
+	glutInitWindowSize(HEIGHT, WIDTH);
 	//glutInitWindowPosition(200, 200);
 	glutCreateWindow("Boundary Fill : Nishkarsh");
 	init();
