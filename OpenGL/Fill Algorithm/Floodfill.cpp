@@ -2,6 +2,8 @@
 #include <GL/glut.h>
 #include<GL/gl.h>
 
+const int WIDTH = 700;
+const int HEIGHT = 700;
 struct Color {
 	GLfloat r;
 	GLfloat g;
@@ -50,10 +52,17 @@ void onMouseClick(int button, int state, int x, int y)
 {
 	Color newColor = {1.0f, 0.0f, 0.0f};
 	Color oldColor = {1.0f, 1.0f, 1.0f};
-GLint x41,y41;
-x41=350;
-y41=350;
-	floodFill(x, y , oldColor, newColor);
+
+    int halfWidth = WIDTH/2;
+	if(y > halfWidth)
+	{
+		y -= (y-halfWidth)*2;
+	}
+	else
+	{
+		y += (halfWidth-y)*2;
+	}
+	floodFill(x, y, oldColor, newColor);
 }
 
 void display(void) 
@@ -98,7 +107,7 @@ int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
-	glutInitWindowSize(700, 700);
+	glutInitWindowSize(HEIGHT, WIDTH);
 	glutInitWindowPosition(200, 200);
 	glutCreateWindow("Fill Color By Nishkarsh Raj");
 	init();
